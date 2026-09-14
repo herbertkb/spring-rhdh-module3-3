@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-demo-3-3
+  namespace: demo-project
+  labels:
+    app: springboot-demo-3-3
+  annotations:
+    backstage.io/kubernetes-id: springboot-demo-3-3
+    backstage.io/kubernetes-namespace: demo-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot-demo-3-3
+  template:
+    metadata:
+      labels:
+        app: springboot-demo-3-3
+    spec:
+      containers:
+        - name: springboot
+          image: image-registry.openshift-image-registry.svc:5000/demo-project/springboot-demo-3-3-backend:latest
+          ports:
+            - containerPort: 7890
+        - name: react-app
+          image: image-registry.openshift-image-registry.svc:5000/demo-project/springboot-demo-3-3-frontend:latest
+          ports:
+            - containerPort: 3000

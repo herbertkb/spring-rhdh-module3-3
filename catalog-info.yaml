@@ -1,0 +1,18 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spring-rhdh-module3-3
+  annotations:
+    github.com/project-slug: herbertkb/spring-rhdh-module3-3
+    backstage.io/kubernetes-id: springboot-demo-3-3
+    backstage.io/kubernetes-namespace: demo-project
+    backstage.io/kubernetes-label-selector: 'app=springboot-demo-3-3'
+  tags:
+    - springboot
+    - api
+    - microservice
+spec:
+  type: service
+  lifecycle: experimental
+  owner: herbertkb
