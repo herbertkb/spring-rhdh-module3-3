@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const APP_URL = "https://springboot-route-demo-project.apps.cluster-x6pmz.dynamic.redhatworkshops.io/api/v1/weather";
+const APP_URL = "https://springboot-route-demo-project.apps.cluster-x6pmz.dyn.redhatworkshops.io/api/v1/weather";
 const apiKey = 'e215107c1d085074a1515c5cf39feadb';
 class WeatherService {
 
